@@ -18,7 +18,6 @@ class game():
 
 	def __init__(self):
 		
-#		print("MORPION\nNOUVELLE PARTIE !\n")
 		###self.tqblequ = tqblequdejeu()
 
 		self.tableau = []
@@ -37,8 +36,6 @@ class game():
 		player1 = self.init_player(1)
 		player2 = self.init_player(2)
 
-#		print("{} VERSUS {}\nLet's fight to the death !!!".format(player1, player2))
-
 		self.joueur_en_cours = choice([player1, player2])
 
 		if self.joueur_en_cours == player1:
@@ -46,7 +43,6 @@ class game():
 		else :
 			self.joueur_pas_en_cours = player1
 
-#		print("C'est {} qui debutera le Combat !!!".format(self.joueur_en_cours))
 
 	def restart(self):
 
@@ -154,35 +150,3 @@ class game():
 			if len(case_deja_played) == 9 :
 				input("DRAW !\n")
 				break
-
-
-
-
-#			while choice_case_2 == 1 :
-
-#				while (case_played != "1") and (case_played != "2") and (case_played != "3") and (case_played != "4") and (case_played != "5") and (case_played != "6") and (case_played != "7") and (case_played != "8") and (case_played != "9") :
-#					case_played = input("C'est au tour de {} de jouer. Sur quelle case veux-tu jouer ?\n".format(self.joueur_pas_en_cours))
-#					if case_played in case_deja_played :
-#						input("Cette case a deje ete jouee !!!")
-#						case_played = 0
-
-#				case_deja_played.append(case_played)
-#				case_played = int(case_played)
-#				self.tableau[case_played - 1].write_case("O")
-
-#				choice_case_2 -= 1
-			
-#				self.affichage_plateau()
-
-#			if (self.tableau[0].affichage_case == self.tableau[1].affichage_case == self.tableau[2].affichage_case != ' ') \
-#			or (self.tableau[3].affichage_case == self.tableau[4].affichage_case == self.tableau[5].affichage_case != ' ') \
-#			or (self.tableau[6].affichage_case == self.tableau[7].affichage_case == self.tableau[8].affichage_case != ' ') \
-#			or (self.tableau[0].affichage_case == self.tableau[3].affichage_case == self.tableau[6].affichage_case != ' ') \
-#			or (self.tableau[1].affichage_case == self.tableau[4].affichage_case == self.tableau[7].affichage_case != ' ') \
-#			or (self.tableau[2].affichage_case == self.tableau[5].affichage_case == self.tableau[8].affichage_case != ' ') \
-#			or (self.tableau[0].affichage_case == self.tableau[4].affichage_case == self.tableau[8].affichage_case != ' ') \
-#			or (self.tableau[2].affichage_case == self.tableau[4].affichage_case == self.tableau[6].affichage_case != ' ') :
-#					choice_case_1 = 2
-#					choice_case_2 = 2
-#					input("{} WIN THE GAME !\n".format(self.joueur_pas_en_cours.upper()))
-#					continue
